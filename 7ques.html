@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Information</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>Pets Information</header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Weight</th>
+                    <th>Type</th>
+                    <th>Likes</th>
+                </tr>
+            </thead>
+            <tbody id="petTable">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const petTable = document.getElementById("petTable");
+
+        const petsData = [
+        {name: 'gonny', age: 5, weight: 20, type: 'dog', likes: 'eating'},
+// {"name":"gonny","age":5,"weight":20,"type":"dog","likes":"eating"},
+ {name: 'sunny', age: 6, weight: 20, type: 'dog', likes: 'playing'},
+//  {"name":"sunny","age":6,"weight":20,"type":"dog","likes":"playing"},
+ {name: 'kenny', age: 3, weight: 12, type: 'cat', likes: 'irritating'},
+//  {"name":"kenny","age":3,"weight":12,"type":"cat","likes":"irritating"}
+        ];
+
+        function displayPets(pets) {
+            pets.forEach(function (pet) {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                
+                    <td>${pet.name}</td>
+                    <td>${pet.age}</td>
+                    <td>${pet.weight}</td>
+                    <td>${pet.type}</td>
+                    <td>${pet.likes}</td>
+                `;
+                petTable.appendChild(row);
+            });
+        }
+
+    
+        displayPets(petsData);
+        // console.log("Pet Object:", displayPets);
+        //     console.log("Pet Object as JSON:", JSON.stringify(petObject));
+    </script>
+</body>
+</html>

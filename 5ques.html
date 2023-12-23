@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Style Changer</title>
+    <style>
+        p {
+            font-size: 16px;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Hey.I am Teenu Joshi</p>
+    <div>
+        <button onclick="changeColor('red')">Red</button>
+        <button onclick="changeColor('green')">Green</button>
+        <button onclick="changeColor('blue')">Blue</button>
+    </div>
+    <div>
+        <button onclick="changeFontSize(10)">10</button>
+        <button onclick="changeFontSize(20)">20</button>
+        <button onclick="changeFontSize(30)">30</button>
+    </div>
+    <div>
+        <button onclick="changeFont('Arial, sans-serif')">Arial</button>
+        <button onclick="changeFont('Verdana, sans-serif')">Verdana</button>
+        <button onclick="changeFont('Times New Roman, serif')">Times New Roman</button>
+    </div>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById("text").style.color = color;
+        }
+
+        function changeFontSize(fontSize) {
+            document.getElementById("text").style.fontSize = fontSize + "px";
+        }
+
+        function changeFont(fontFamily) {
+            document.getElementById("text").style.fontFamily = fontFamily;
+        }
+    </script>
+</body>
+</html>

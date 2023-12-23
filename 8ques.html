@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.css"/>
+    <link rel="icon" type="jpg" href="../favicon_octocat.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function() {
+        $("#show-table").click(function() {
+          $(".paper-details table");
+        });
+
+        $("#redesign").click(function() {
+          $("#redesign").toggle(100);
+          $("body").css({
+            "background-color":"pink",
+            "color":"black",
+            "font-family":"'Arial', Courier, monospace",
+            "background-size":"100% 200%",
+    
+          });
+          $(".container").css({
+            "padding":"50px",
+            "padding-top":"5px"
+          });
+          $(".container h1").css({
+            "text-align":"center",
+            "border":"2px solid white",
+            "padding":"2px"
+          });
+          $("table, th, td").css("border", "1px solid white");
+          $("h2").css({
+            "text-decoration":"normal"
+          });
+        });
+      });
+      </script>
+
+  
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Bachelor of Science (Hons.) Computer Science Course Details</h1>
+      <div class="eligibility">
+        <h2>Eligibility Criteria</h2>
+        <p class="eligibilty-details">
+          CUET EXAM
+          
+        </p>
+      </div>
+
+      <div class="fee">
+        <h2>Fee</h2>
+        <p>Fee for B.Sc. (Hons.) Computer Science  is Rs. 30,000/-.</p>
+      </div>
+
+      <div class="paper-details">
+        <h2>Papers with Names and Credits</h2>
+        <!-- <button id="show-table">Show</button> -->
+        <table>
+          <tr>
+            <th>Year</th>
+            <th>Course Opted</th>
+            <th>Course Name</th>
+            <th>Semester</th>
+          </tr>
+          <tr>
+            <td rowspan="6">I</td>
+            <td>Core Course - I</td>
+            <td>Internet Technologies</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Core Course - I<br>Practical</td>
+            <td>System Programming</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Core Course - II</td>
+            <td>TOC</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Core Course - II<br>Practical/Tutorial</td>
+            <td>Microprocessor</td>
+            <td>2</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="scope">
+        <h2>Scope of the course</h2>
+        <p>
+          <ul>
+            <li>Job</li>
+            <li>Masters</li>
+          </ul>
+        </p>
+      </div>
+
+      <button id="redesign">Redesign</button>
+    </div>
+  </body>
+</html>
